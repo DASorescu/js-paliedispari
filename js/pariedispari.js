@@ -6,8 +6,12 @@
 // analizzare attraverso la funzione creata la somma 
 // dichiarare se e pari o dispari in console 
 
+// ? chiedo all'utente di inserire un numero e mi assicuro che sia tale !
+let userNumber;
+do{
+    userNumber = parseInt(prompt("inserire un NUMERO da 1 a 5","3"));
+}while(   userNumber > 5 || userNumber < 1 || isNaN(userNumber) );
 
-const userNumber = parseInt(prompt("inserire un numero da 1 a 5","3"));
 let message = ("Il risultato della somma tra il numero da lei inserito e quello casualmente generato e': ");
 
 // //FUNZIONE PER GENERARE UN RANDOM NUMBER DA 1 A 5 AL PC 
@@ -20,7 +24,7 @@ let comNumber = (randomNumber());
 
 console.log(comNumber);
 
-// // CALCOLO LA SOMMA
+// // CALCOLO LA SOMMA 
 
 let somma =  userNumber + comNumber;
 
