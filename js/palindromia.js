@@ -1,27 +1,32 @@
-// // far inserire una parola all'utente
-// // creare una funzione che ribalti la parola e la confronti con quella inserita dall'utente e restituisca come valore palindroma o non palindroma 
-// // stampare in console il risultato 
+// far inserire una parola all'utente
+// creare una funzione che ribalti la parola e la confronti con quella inserita dall'utente e restituisca come valore palindroma o non palindroma 
+// stampare in console il risultato 
 
 
-// // //parola data dall'utente
-// let userWord = prompt("inserisci una parola" , "anna");
-// // messaggio che andro' a cambiare in base al risultato del check palindromia 
-// let result;
+// //parola data dall'utente
+// small Validation
+let userWord;
+do{
+    userWord = prompt("inserisci una parola" , "anna");
 
-// // ? FUNZIONE CHE MI STABILISCE SE LA PAROLA DA ME INSERITA E' PALINDROMA O MENO 
-// function palindroma(){
-//     let switchedWord = '';
-//     for(let i = userWord.length -1 ; i >= 0; i--){
-//         switchedWord += userWord[i];
-//     }
+}while(!isNaN(userWord));
+// messaggio che andro' a cambiare in base al risultato del check palindromia 
+let result;
 
-//     console.log(switchedWord);
+// ? FUNZIONE CHE MI STABILISCE SE LA PAROLA DA ME INSERITA E' PALINDROMA O MENO 
+function palindroma(){
+    let switchedWord = '';
+    for(let i = userWord.length -1 ; i >= 0; i--){
+        switchedWord += userWord[i];
+    }
 
-//     switchedWord === userWord ? result = ("e' palindroma") : result = ("non e' palindroma");
+    console.log(switchedWord);
 
-//     return result
-// }
+    switchedWord === userWord ? result = ("e' palindroma") : result = ("non e' palindroma");
 
-// // # STAMPO IN CONSOLE IL RISULTATO 
-// console.log("la parola da te inserita " + palindroma());
+    return result
+}
+
+// # STAMPO IN CONSOLE IL RISULTATO 
+console.log("la parola da te inserita " + palindroma());
         
