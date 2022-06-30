@@ -7,14 +7,14 @@
 // small Validation
 let userWord;
 do{
-    userWord = prompt("inserisci una parola" , "anna");
+    userWord = prompt("inserisci una parola" , "anna").trim();
 
 }while(!isNaN(userWord));
 // messaggio che andro' a cambiare in base al risultato del check palindromia 
 let result;
 
 // ? FUNZIONE CHE MI STABILISCE SE LA PAROLA DA ME INSERITA E' PALINDROMA O MENO 
-function palindroma(){
+function isPalindroma(){
     let switchedWord = '';
     for(let i = userWord.length -1 ; i >= 0; i--){
         switchedWord += userWord[i];
@@ -28,5 +28,5 @@ function palindroma(){
 }
 
 // # STAMPO IN CONSOLE IL RISULTATO 
-console.log("la parola da te inserita " + palindroma());
+console.log("la parola da te inserita " + isPalindroma());
         
